@@ -6,8 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import getTrek from "@/sanity/lib/querys/getTreks";
 import { TrekCard } from "@/lib/types";
-let offset = 0;
-let limit = 10;
+
 const Card = ({ count }: { count: number }) => {
   const [trekCards, setTrekCards] = useState<TrekCard[]>([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -17,8 +16,6 @@ const Card = ({ count }: { count: number }) => {
       setIsLoading(true);
       const data = await getTrek(0, 10);
       setTrekCards(data);
-      offset = 10;
-      limit = 20;
       setIsLoading(false);
     };
     fetchData();
@@ -26,22 +23,11 @@ const Card = ({ count }: { count: number }) => {
 
   const fetchMore = async () => {
     setIsLoading(true);
-    console.log(offset, limit);
+    let offset = 10;
+    let limit = count;
     const data = await getTrek(offset, limit);
     console.log(data);
     setTrekCards((prevTrekCards) => [...prevTrekCards, ...data]);
-    length = count++ - offset;
-    console.log("length", length);
-    if (length < 10) {
-      limit = limit + length;
-      limit++;
-    } else {
-      limit = limit + 10;
-    }
-    offset = offset + 10;
-    console.log(offset);
-    console.log("Next Limit: ", limit);
-    console.log("Next offset: ", offset);
     setIsLoading(false);
   };
 
@@ -125,7 +111,7 @@ const Card = ({ count }: { count: number }) => {
               onClick={fetchMore}
               disabled={isLoading}
             >
-              {isLoading ? "Loading..." : "View More Treks"}
+              {isLoading ? "Loading..." : "View All Treks"}
             </Button>
           </>
         )}
