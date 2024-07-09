@@ -58,6 +58,7 @@ interface CardProps {
   faqSection: FAQ[];
   rating: string;
   comments?: Array<Comment>;
+  videoUrls: string[];
 }
 
 export async function generateMetadata({
@@ -90,7 +91,7 @@ const TrekPage = async ({ params }: Params) => {
   const hasImageGallery =
     data.imageGalleryUrls && data.imageGalleryUrls.length > 0;
   const hasFnq = data.faqSection && data.faqSection.length > 0;
-
+  const hasVideos = data.videoUrls && data.videoUrls.length > 0;
   // reva;
   return (
     <div className="w-full h-full">
@@ -169,7 +170,23 @@ const TrekPage = async ({ params }: Params) => {
                 components={myPortableTextComponents}
               />
             </div>
-
+        {hasVideos &&
+              data?.videoUrls.map((url, index) => (
+              <div
+                className="relative md:w-[90%] w-full md:h-[70dvh] h-[50vh] mb-12"
+                key={index}
+              >
+                <iframe
+                  className="absolute top-0 left-0 w-full h-full rounded-md"
+                  src={url}
+                  title="YouTube video player"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                ></iframe>
+              </div>
+            ))}
             {hasImageGallery && (
               <div className="mt-14">
                 <h1 className="mb-16 text-3xl font-bold relative gallery text-teal-700">
