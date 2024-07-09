@@ -4,6 +4,7 @@ async function getFullTrek(slug: string) {
   const query = `*[_type == "trekCard" && slug.current == $slug][0]{
     _id,
     trekName,
+    videoUrls,
     "backgroundImageUrl": backgroundImage.asset->url,
     duration,
     prize,
