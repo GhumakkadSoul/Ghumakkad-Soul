@@ -1,4 +1,4 @@
-import { Rule } from "sanity";
+import {  Rule } from "sanity";
 
 export const trekCard = {
   name: "trekCard",
@@ -85,12 +85,16 @@ export const trekCard = {
           type: "image",
           options: { hotspot: true },
         },
-        {
-          type: "file",
-          title: "Video",
-          options: { accept: "video/*" },
-        },
       ],
+    },
+    {
+      name: "videoUrls",
+      title: "YouTube Videos",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        layout: "url",
+      },
     },
     {
       name: "imageGallery",
