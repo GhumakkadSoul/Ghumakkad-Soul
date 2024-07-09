@@ -81,9 +81,11 @@ const Card = ({ count }: { count: number }) => {
                   </p>
                 </div>
                 <div className="w-full flex items-center justify-center gap-3 mt-4">
-                  <Button className="py-6 bg-transparent border-[4px] text-emerald-700 rounded-md border-solid border-teal-700 hover:text-white hover:border-teal-600 hover:bg-teal-600">
-                    <Phone />
-                  </Button>
+                 <a href="tel:8630024459">
+                      <Button className="py-6 bg-transparent border-[4px] text-emerald-700 rounded-md border-solid border-teal-700 hover:text-white hover:border-teal-600 hover:bg-teal-600">
+                        <Phone />
+                      </Button>
+                    </a>
                   <Link
                     href={
                       trek.slug === null ? "" : `/treks/${trek.slug.current}`
