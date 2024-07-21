@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "View all Treks in Uttarakhand",
     type: "website",
     locale: "en_IN",
-    url: `https://ghumakkadsoul.vercel.app/treks/all-trek-uttarakhand`,
+    url: `https://ghumakkadsoul.in/treks/all-trek-uttarakhand`,
     siteName: "ghumakkadsoul.in",
   },
 };
