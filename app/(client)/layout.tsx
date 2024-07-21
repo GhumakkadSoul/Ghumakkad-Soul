@@ -8,22 +8,24 @@ import Search from "@/components/Search";
 import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import Booking from "@/components/Booking";
+import Whatsapp from "@/components/Whatapp";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ghumakkad Soul | Home",
   description:
-    "Since the world is wide and life is short, the better it is to start exploring it sooner. ",
+    "Best tour and travels Company in India and uttarakhand.",
   icons: {
     icon: "./favicon.ico",
   },
   openGraph: {
     title: `Ghumakkad Soul | Home`,
-    description: `Since the world is wide and life is short, the better it is to start exploring it sooner.} `,
+    description: `Best tour and travels Company in India and uttarakhand.`,
     type: "website",
     locale: "en_IN",
-    url: `https://ghumakkadsoul.vercel.app/`,
+    url: `https://ghumakkadsoul.in/`,
     siteName: "ghumakkadsoul.in",
   },
 };
@@ -41,6 +43,7 @@ export default function RootLayout({
           <Booking />
           <Search />
           {children}
+          <Whatsapp />
           <Footer />
         </MantineProvider>
       </body>
