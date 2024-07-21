@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     description: "View Most Popular Treks",
     type: "website",
     locale: "en_IN",
-    url: `https://ghumakkadsoul.vercel.app/treks/view-all-popular-treks`,
+    url: `https://ghumakkadsoul.in/treks/view-all-popular-treks`,
     siteName: "ghumakkadsoul.in",
   },
 };
