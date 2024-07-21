@@ -104,7 +104,7 @@ export const trekCard = {
     },
     {
       name: "faqSection",
-      title: "FAQ Section",
+      title: "Itenirary",
       type: "array",
       of: [
         {
