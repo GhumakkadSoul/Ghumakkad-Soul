@@ -6,17 +6,17 @@ import React from "react";
 export const metadata: Metadata = {
   title: "Ghumakkad Soul | View all Treks",
   description:
-    "Ghumakkad Soul view all Treks in Uttarakhand & Himachal Pradesh",
+    "Ghumakkad Soul view all Best Treks in India",
   icons: {
     icon: "./favicon.ico",
   },
   openGraph: {
     title: "Ghumakkad Soul | View all Treks",
     description:
-      "Ghumakkad Soul view all Treks in Uttarakhand & Himachal Pradesh",
+      "Ghumakkad Soul view all Best Treks in India",
     type: "website",
     locale: "en_IN",
-    url: `https://ghumakkadsoul.vercel.app/treks`,
+    url: `https://ghumakkadsoul.in/treks`,
     siteName: "ghumakkadsoul.in",
   },
 };
