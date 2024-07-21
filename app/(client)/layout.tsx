@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import Booking from "@/components/Booking";
 import Whatsapp from "@/components/Whatapp";
-
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,6 +37,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+       <head>
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-TYWNXMJ5FE"
+        ></Script>
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-TYWNXMJ5FE');
+          `}
+        </Script>
+      </head>
       <body className={inter.className}>
         <MantineProvider>
           <Navbar />
