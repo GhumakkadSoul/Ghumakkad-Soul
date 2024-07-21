@@ -75,8 +75,8 @@ export async function generateMetadata({
       description: `Trek | ${params?.treksid}`,
       type: "website",
       locale: "en_IN",
-      url: `https://ghumakkadsoul.vercel.app/blogs/${params?.treksid}`,
-      siteName: "Ghumakkadsoul",
+      url: `https://ghumakkadsoul.in/blogs/${params?.treksid}`,
+      siteName: "ghumakkadsoul.in",
     },
   };
 }
