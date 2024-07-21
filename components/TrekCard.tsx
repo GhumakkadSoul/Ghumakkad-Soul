@@ -42,10 +42,13 @@ const TrekCard: React.FC = () => {
   return (
     <div className="w-full lg:mt-32 mt-8 h-auto">
       <div className="w-full relative lg:px-14 md:px-4  mb-8 h-auto">
-        <div className="px-8">
-          <h1 className="font-bold text-2xl md:text-3xl  relative heading">
+         <div className="px-8 flex items-center justify-between">
+          <h1 className="font-bold text-[17px] md:text-3xl  relative heading">
             Recommended Tracks
           </h1>
+          <Link href="/treks" className=" text-teal-700 font-semibold">
+            View All
+          </Link>
         </div>
         <div className="w-full h-full mt-12">
           <Swiper
