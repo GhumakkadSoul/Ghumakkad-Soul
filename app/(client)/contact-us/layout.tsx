@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: "Contact to Ghumakkad Soul Team",
     type: "website",
     locale: "en_IN",
-    url: `https://ghumakkadsoul.vercel.app/contact-us`,
+    url: `https://ghumakkadsoul.in/contact-us`,
     siteName: "ghumakkadsoul.in",
   },
 };
