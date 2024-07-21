@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import getblogs from "@/sanity/lib/querys/getblogs";
 import { BlogSkel } from "@/components/BlogSkel";
 
-interface BlogsProps {
+export interface BlogsProps {
   _id: string;
   title: string;
   slug: {
