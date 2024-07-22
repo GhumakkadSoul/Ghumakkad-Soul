@@ -67,6 +67,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
     },
     {
+      url: "https://www.ghumakkadsoul.in/policy/cancellation-policy",
+      lastModified: new Date(),
+    },
+    {
+      url: "https://www.ghumakkadsoul.in/policy/treks-terms-and-conditions",
+      lastModified: new Date(),
+    },
+    {
       url: "https://www.ghumakkadsoul.in/treks/all-trek-uttarakhand",
       lastModified: new Date(),
     },

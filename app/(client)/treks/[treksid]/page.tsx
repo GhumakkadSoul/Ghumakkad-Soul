@@ -9,7 +9,7 @@ import {
   MountainSnow,
   Users,
 } from "lucide-react";
-import travel from "@/public/traveling.svg";
+import traves from "@/public/traveling.svg";
 import getfullTrek from "@/sanity/lib/querys/getfullTrek";
 import { PortableText } from "next-sanity";
 import { urlForImage } from "@/sanity/lib/image";
@@ -24,6 +24,9 @@ import BookBtn from "@/components/Buttons/button";
 import Btn2 from "@/components/Buttons/button2";
 import Comments from "@/components/Comments";
 import AllComments from "@/components/AllComments";
+import Includes from "@/components/Includes";
+import Exclusions from "@/components/Exclusions";
+import CancellationPolicy from "@/components/CancellationPolicy";
 
 interface Params {
   params: {
@@ -170,23 +173,23 @@ const TrekPage = async ({ params }: Params) => {
                 components={myPortableTextComponents}
               />
             </div>
-        {hasVideos &&
+            {hasVideos &&
               data?.videoUrls.map((url, index) => (
-              <div
-                className="relative md:w-[90%] w-full md:h-[70dvh] h-[50vh] mb-12"
-                key={index}
-              >
-                <iframe
-                  className="absolute top-0 left-0 w-full h-full rounded-md"
-                  src={url}
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                ></iframe>
-              </div>
-            ))}
+                <div
+                  className="relative md:w-[90%] w-full md:h-[70dvh] h-[50vh] mb-12"
+                  key={index}
+                >
+                  <iframe
+                    className="absolute top-0 left-0 w-full h-full rounded-md"
+                    src={url}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              ))}
             {hasImageGallery && (
               <div className="mt-14">
                 <h1 className="mb-16 text-3xl font-bold relative gallery text-teal-700">
@@ -224,6 +227,12 @@ const TrekPage = async ({ params }: Params) => {
                 </Accordion>
               )}
             </div>
+            {/* includes  */}
+            <Includes />
+            {/* Exclusions */}
+            <Exclusions />
+            {/* full Itinerary */}
+            <CancellationPolicy />
             {/* Review Section */}
             <Comments postId={data._id} />
             <AllComments comments={data?.comments || []} />
@@ -257,7 +266,7 @@ const TrekPage = async ({ params }: Params) => {
               </div>
             </div>
             <div className="w-full h-[120px] px-4">
-              <Image src={travel} alt="Book_now" className="w-full h-full" />
+              <Image src={traves} alt="Book_now" className="w-full h-full" />
             </div>
             <div className="w-full px-4 mt-4">
               <BookBtn />
