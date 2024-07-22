@@ -64,7 +64,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  href="/contect-u"
+                  href="/contect-us"
                   className=" font-semibold tex-[16px] mt-2"
                 >
                   Contect Us
@@ -73,6 +73,14 @@ const Footer = () => {
               <li>
                 <Link href="/studio" className=" font-semibold tex-[16px] mt-2">
                   Studio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/policy/cancellation-policy"
+                  className=" font-semibold tex-[16px] mt-2"
+                >
+                  Cancellation Policy
                 </Link>
               </li>
             </ul>
@@ -110,7 +118,9 @@ const Footer = () => {
       </div>
       <div className="h-[2px] w-full border-dotted bg-white lg:my-12 my-6" />
       <div className="mb-4 flex items-center lg:flex-row md:flex-row flex-col gap-3 justify-between px-4 text-white">
-        <Link href="">Design and Managed by</Link>
+        <Link href="/policy/treks-terms-and-conditions">
+          Treks Terms & Conditions
+        </Link>
         <Link href="" className="text-wrap text-center">
           ©2024 ghumakkadsoul.in All rights reserved
         </Link>
