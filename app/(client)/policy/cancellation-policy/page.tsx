@@ -26,7 +26,7 @@ const page = () => {
           We bring you most fair, feasible and convenient cancellation policy as
           under:-
         </h2>
-        <ul className="flex flex-col mt-4 space-y-4 pr-4 list-decimal">
+        <ul className="flex flex-col mt-4 space-y-4  list-decimal px-4">
           <li className="text-[17px]">
             <span className="text-teal-700">
               Cancelling prior 21 days from trek start date
