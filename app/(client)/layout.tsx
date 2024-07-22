@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import Booking from "@/components/Booking";
 import Whatsapp from "@/components/Whatapp";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -37,8 +37,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleAnalytics />
+       <GoogleTagManager gtmId="GTM-W29SL4QL" />
       <body className={inter.className}>
+          <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-W29SL4QL"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
         <MantineProvider>
           <Navbar />
           <Booking />
