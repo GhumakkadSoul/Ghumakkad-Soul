@@ -31,7 +31,11 @@ const Footer = () => {
 
             <p className="flex items-center font-medium justify-normal gap-2">
               <Phone size={17} />
+<<<<<<< HEAD
               +91 7819910076
+=======
+              +91 7819910076 
+>>>>>>> b797115820d624260aa03a194286938b1aa4b457
             </p>
             <p className="flex mt-4 font-medium items-center justify-normal gap-2">
               <Mail size={17} />
@@ -90,7 +94,11 @@ const Footer = () => {
           <h1 className="text-lg font-bold text-white">Follow Us</h1>
           <div className="flex items-center justify-normal gap-4 lg:mt-12 mt-4">
             <Link
+<<<<<<< HEAD
               href="https://www.instagram.com/_ghumakkadsoul.in/"
+=======
+              href=""
+>>>>>>> b797115820d624260aa03a194286938b1aa4b457
               className="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-white"
             >
               <Instagram className="text-teal-700" />
@@ -108,7 +116,11 @@ const Footer = () => {
               <Facebook className="text-teal-700" />
             </Link>
             <Link
+<<<<<<< HEAD
               href="https://www.youtube.com/@GhumakkadSoul_in"
+=======
+              href=""
+>>>>>>> b797115820d624260aa03a194286938b1aa4b457
               className="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-white"
             >
               <Youtube className="text-teal-700" />
