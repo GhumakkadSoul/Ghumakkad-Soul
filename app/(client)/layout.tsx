@@ -1,7 +1,6 @@
 import "./globals.css";
-import "@mantine/core/styles.css";
+
 import type { Metadata } from "next";
-import { MantineProvider } from "@mantine/core";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Search from "@/components/Search";
@@ -46,14 +45,12 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
-        <MantineProvider>
-          <Navbar />
-          <Booking />
-          <Search />
-          {children}
-          <Whatsapp />
-          <Footer />
-        </MantineProvider>
+        <Navbar />
+        <Booking />
+        <Search />
+        {children}
+        <Whatsapp />
+        <Footer />
       </body>
     </html>
   );

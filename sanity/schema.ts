@@ -7,8 +7,7 @@ import { about } from "@/sanity/lib/schemas/about";
 import { review } from "@/sanity/lib/schemas/review";
 import { blogs } from "@/sanity/lib/schemas/blog";
 import { comment } from "@/sanity/lib/schemas/comment";
-<<<<<<< HEAD
-import { Products } from "@/sanity/lib/schemas/products";
+import { Products } from "@/sanity/lib/schemas/products"; // Added products schema
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -22,9 +21,4 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     comment,
     Products,
   ],
-=======
-
-export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [slider, navbar, trekCard, banner, about, review, blogs, comment],
->>>>>>> b797115820d624260aa03a194286938b1aa4b457
 };
