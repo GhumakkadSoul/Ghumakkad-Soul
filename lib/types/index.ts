@@ -26,7 +26,7 @@ export interface AboutProps {
   cardDesc3: string;
   cardDesc4: string;
 }
-<<<<<<< HEAD
+
 interface Slug {
   _type: string;
   current: string;
@@ -103,5 +103,3 @@ export const quantity = [
     value: "10",
   },
 ];
-=======
->>>>>>> b797115820d624260aa03a194286938b1aa4b457

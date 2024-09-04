@@ -17,11 +17,7 @@ export async function POST(req: NextRequest) {
   let mailOptions = {
     from: email,
     to: process.env.GMAIL_USER,
-<<<<<<< HEAD
     subject: `Trek Booking Form Submission from ${fullName}`,
-=======
-    subject: `Contact Form Submission from ${fullName}`,
->>>>>>> b797115820d624260aa03a194286938b1aa4b457
     text: `
       Name: ${fullName}
       Email: ${email}

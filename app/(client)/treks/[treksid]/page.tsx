@@ -78,11 +78,8 @@ export async function generateMetadata({
       description: `Trek | ${params?.treksid}`,
       type: "website",
       locale: "en_IN",
-<<<<<<< HEAD
       url: `https://ghumakkadsoul.in/treks/${params?.treksid}`,
-=======
-      url: `https://ghumakkadsoul.in/blogs/${params?.treksid}`,
->>>>>>> b797115820d624260aa03a194286938b1aa4b457
+
       siteName: "ghumakkadsoul.in",
     },
   };
