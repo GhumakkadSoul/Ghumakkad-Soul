@@ -21,7 +21,7 @@ const ProductCard = ({ data }: ProductProps) => {
                 alt="Rent_Trekking_Product"
                 width={700}
                 height={700}
-                className="w-full h-full hover:animate-zoomIn"
+                className="w-full h-full"
               />
             </div>
             <div className="flex flex-col mt-2 font-semibold text-[17px]">
