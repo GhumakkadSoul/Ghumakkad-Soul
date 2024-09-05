@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req: NextRequest) {
-  const { fullName, email, phoneNumber, trekName, message } = await req.json();
+  const { fullName, phoneNumber, trekName, productName, quantity, trekDate } =
+    await req.json();
   const transporter = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
@@ -15,15 +16,16 @@ export async function POST(req: NextRequest) {
   });
 
   let mailOptions = {
-    from: email,
+    from: fullName,
     to: process.env.GMAIL_USER,
-    subject: `Trek Booking Form Submission from ${fullName}`,
+    subject: `Product Booking Form Submission from ${fullName}`,
     text: `
       Name: ${fullName}
-      Email: ${email}
       Phone Number: ${phoneNumber}
       Trek Name: ${trekName}
-      Message: ${message}
+      Trek Date: ${new Date(trekDate).toDateString()}
+      Product Name: ${productName}
+      Quantity: ${quantity}
     `,
   };
 

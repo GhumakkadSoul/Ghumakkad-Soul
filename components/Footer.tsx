@@ -31,7 +31,7 @@ const Footer = () => {
 
             <p className="flex items-center font-medium justify-normal gap-2">
               <Phone size={17} />
-              +91 7819910076 
+              +91 7819910076
             </p>
             <p className="flex mt-4 font-medium items-center justify-normal gap-2">
               <Mail size={17} />
@@ -90,7 +90,7 @@ const Footer = () => {
           <h1 className="text-lg font-bold text-white">Follow Us</h1>
           <div className="flex items-center justify-normal gap-4 lg:mt-12 mt-4">
             <Link
-              href=""
+              href="https://www.instagram.com/_ghumakkadsoul.in/"
               className="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-white"
             >
               <Instagram className="text-teal-700" />
@@ -108,7 +108,7 @@ const Footer = () => {
               <Facebook className="text-teal-700" />
             </Link>
             <Link
-              href=""
+              href="https://www.youtube.com/@GhumakkadSoul_in"
               className="w-[50px] h-[50px] rounded-full flex items-center justify-center bg-white"
             >
               <Youtube className="text-teal-700" />

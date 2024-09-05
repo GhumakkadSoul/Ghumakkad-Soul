@@ -4,7 +4,6 @@ import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import Image from "next/image";
-import banner from "@/public/yosemite-922757_1280.jpg";
 import { Star } from "lucide-react";
 import { getreview } from "@/sanity/lib/querys/getreview";
 interface reviewProp {

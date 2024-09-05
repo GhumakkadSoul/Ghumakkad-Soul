@@ -8,15 +8,15 @@ const GoogleAnalytics = () => {
         src={`https://www.googletagmanager.com/gtag/js?id=G-W6CRKWGYPQ`}
       />
 
-      <Script id="" strategy="lazyOnload">
+      <Script id="google-analytics" strategy="lazyOnload">
         {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-W6CRKWGYPQ', {
-                page_path: window.location.pathname,
-                });
-            `}
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-W6CRKWGYPQ', {
+            page_path: window.location.pathname,
+          });
+        `}
       </Script>
     </>
   );

@@ -3,6 +3,14 @@ import { client } from "@/sanity/lib/client";
 import { MetadataRoute } from "next";
 import { BlogsProps } from "./(client)/blogs/page";
 
+interface ProductProps {
+  _id: string;
+  price: number;
+  slug: {
+    current: string;
+  };
+  description: string;
+}
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   async function getTrek() {
     const query = `
@@ -39,16 +47,44 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return data;
   }
 
+  async function getProducts() {
+    const query = `
+  *[_type == "products"]{
+    productName,
+    price,
+    slug,
+    description,
+    images[]{
+      asset->{
+        _id,
+        url
+      }
+    }
+  }
+    `;
+    const data = await client.fetch(query);
+    return data;
+  }
+
   const treks: TrekCard[] = await getTrek();
   const blogs: BlogsProps[] = await getblogs();
+  const products: ProductProps[] = await getProducts();
+
   const getTrekUrl = treks.map((trek) => ({
     url: `https://www.ghumakkadsoul.in/treks/${trek.slug.current}`,
     lastModified: new Date(),
   }));
+
+  const getProductsUrl = products.map((product) => ({
+    url: `https://www.ghumakkadsoul.in/products/${product.slug.current}`,
+    lastModified: new Date(),
+  }));
+
   const getBlogUrl = blogs.map((blog) => ({
     url: `https://www.ghumakkadsoul.in/blogs/${blog.slug.current}`,
     lastModified: new Date(),
   }));
+
   return [
     {
       url: "https://www.ghumakkadsoul.in/",
@@ -84,5 +120,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
     ...getTrekUrl,
     ...getBlogUrl,
+    ...getProductsUrl,
   ];
 }
