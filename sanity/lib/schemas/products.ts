@@ -31,7 +31,7 @@ export const Products = {
       title: "Description",
       type: "text",
       validation: (Rule: Rule) =>
-        Rule.max(250).warning("Description should not exceed 200 characters"),
+        Rule.max(250).warning("Description should not exceed 250 characters"),
     },
     {
       name: "images",
