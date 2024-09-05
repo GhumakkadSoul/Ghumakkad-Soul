@@ -88,4 +88,10 @@
   .gallery::before {
     @apply content-[''] w-24 h-1 rounded-full absolute -bottom-2.5 left-0 bg-teal-600;
   }
+  .cancel::before {
+    @apply content-[''] w-24 h-1 rounded-full absolute -bottom-2.5 left-0 bg-teal-600;
+  }
+  .term::before {
+    @apply content-[''] w-64 h-1 rounded-full absolute -bottom-2.5 left-0 bg-teal-600;
+  }
 }

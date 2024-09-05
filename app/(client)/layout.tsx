@@ -5,7 +5,6 @@ import { Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Search from "@/components/Search";
 import Footer from "@/components/Footer";
-import { Toaster } from "@/components/ui/toaster";
 import Booking from "@/components/Booking";
 import Whatsapp from "@/components/Whatapp";
 import { GoogleTagManager } from "@next/third-parties/google";

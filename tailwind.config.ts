@@ -83,27 +83,20 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        zoomIn: {
+          "0%": { transform: "scale(0)" },
+          "100%": { transform: "scale(1)" },
+        },
+        zoomOut: {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(0)" },
+        },
       },
-<<<<<<< HEAD
-      zoomIn: {
-        "0%": { transform: "scale(0)" },
-        "100%": { transform: "scale(1)" },
-      },
-      zoomOut: {
-        "0%": { transform: "scale(1)" },
-        "100%": { transform: "scale(0)" },
-      },
-
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         zoomIn: "zoomIn 0.5s ease-in-out",
         zoomOut: "zoomOut 0.5s ease-in-out",
-=======
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
->>>>>>> b797115820d624260aa03a194286938b1aa4b457
       },
     },
   },
