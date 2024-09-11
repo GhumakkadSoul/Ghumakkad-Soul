@@ -28,7 +28,7 @@ export async function generateMetadata({
     },
   };
 }
-
+export const revalidate = 1;
 const Page = async ({ params }: Params) => {
   const data = await getFullProduct(params?.productid);
   return (

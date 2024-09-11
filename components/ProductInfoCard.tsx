@@ -38,7 +38,7 @@ const ProductInfoCard = ({ data }: ProductIdProps) => {
               >
                 <Image
                   src={img?.asset?.url}
-                  alt="_product_image"
+                  alt="_product_image_"
                   className="w-full h-full rounded-sm"
                   width={700}
                   height={700}
