@@ -23,7 +23,7 @@ const ProductInfoCard = ({ data }: ProductIdProps) => {
           <div className="w-full md:h-[80dvh] h-[70%]">
             <Image
               src={imageUrl || "/default-image.jpg"}
-              alt="_Product_image"
+              alt="_Product_image_"
               width={700}
               height={700}
               className="w-full h-full rounded-sm"
