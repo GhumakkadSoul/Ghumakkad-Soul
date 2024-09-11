@@ -23,7 +23,7 @@ const ProductInfoCard = ({ data }: ProductIdProps) => {
           <div className="w-full md:h-[80dvh] h-[70%]">
             <Image
               src={imageUrl || "/default-image.jpg"}
-              alt="_Product_image"
+              alt="_Product_image_"
               width={700}
               height={700}
               className="w-full h-full rounded-sm"
@@ -38,7 +38,7 @@ const ProductInfoCard = ({ data }: ProductIdProps) => {
               >
                 <Image
                   src={img?.asset?.url}
-                  alt="_product_image"
+                  alt="_product_image_"
                   className="w-full h-full rounded-sm"
                   width={700}
                   height={700}
@@ -51,7 +51,6 @@ const ProductInfoCard = ({ data }: ProductIdProps) => {
           <h1 className="text-3xl font-bold">{data?.productName}</h1>
           <p className="text-2xl text-teal-700 font-bold">
             {formatCurrency(data?.price)}{" "}
-            <span className="text-sm text-black">(Per day)</span>
           </p>
           <p className="text-[16px] font-semibold text-[#333] text-wrap md:max-w-2xl w-full">
             {data?.description}
