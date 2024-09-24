@@ -1,20 +1,31 @@
 import { client } from "@/sanity/lib/client";
 
-async function getTrekCardData(start = 0, limit = 10) {
+const reamedTreks = [
+  "hampta-pass-trek",
+  "kedarkantha-trek",
+  "har-ki-doon-trek",
+  "dayara-bugyal-trek",
+  "chandrashilla-trek",
+  "bali-pass-trek",
+  "goecha-la-trek",
+  "rupin-pass-trek",
+];
+async function getTrekCardData() {
   const query = `
-*[_type == "trekCard"] | order(_createdAt desc) [${start}...${limit}] {
-  _id,
-  slug,
-  trekName,
-  "backgroundImageUrl": backgroundImage.asset->url,
-  duration,
-  location,
-  distance,
-  bestTime,
-  rating
-}
+  *[_type == "trekCard" && slug.current in $recommendedTreks]  {
+    _id,
+    slug,
+    trekName,
+    "backgroundImageUrl": backgroundImage.asset->url,
+    duration,
+    location,
+    distance,
+    bestTime,
+    rating
+  }
   `;
-  const data = await client.fetch(query);
+
+  const data = await client.fetch(query, { recommendedTreks: reamedTreks });
   return data;
 }
 
