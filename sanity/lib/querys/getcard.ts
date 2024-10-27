@@ -1,14 +1,13 @@
 import { client } from "@/sanity/lib/client";
 
 const reamedTreks = [
-  "hampta-pass-trek",
-  "kedarkantha-trek",
   "har-ki-doon-trek",
+  "hampta-pass-trek",
   "dayara-bugyal-trek",
   "chandrashilla-trek",
   "bali-pass-trek",
-  "goecha-la-trek",
   "rupin-pass-trek",
+  "goecha-la-trek",
 ];
 async function getTrekCardData() {
   const query = `
