@@ -31,7 +31,7 @@ const Footer = () => {
 
             <p className="flex items-center font-medium justify-normal gap-2">
               <Phone size={17} />
-              +91 7819910076
+              +91 7983391606
             </p>
             <p className="flex mt-4 font-medium items-center justify-normal gap-2">
               <Mail size={17} />
